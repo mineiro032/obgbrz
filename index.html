@@ -1,82 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parabéns! Clique para receber o produto</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-top: 0;
-    }
-    .product-image {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 20px auto;
-    }
-    .button {
-      display: block;
-      width: 200px;
-      margin: 30px auto;
-      padding: 15px 30px;
-      background-color: #4CAF50;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
-    .button:hover {
-      background-color: #45a049;
-    }
-  </style>
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s) {
-      if(f.fbq) return; n=f.fbq=function() {
-        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-      };
-      if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-      n.queue=[]; t=b.createElement(e); t.async=!0;
-      t.src=v; s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1173540741251590'); // Use apenas um ID
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1173540741251590&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1173540741251590');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1173540741251590&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-venda VIP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Parabéns!</h1>
-    <img src="images/ERbHusKSyCYO.png" alt="Produto" class="product-image">
-    <p>Você recebeu o seu produto com sucesso. Clique no botão abaixo para acessá-lo.</p>
-    <a href="https://t.me/+9S6OAo0-V0oxN2Qx" class="button" id="productButton">Acessar Produto</a>
-  </div>
+    <div class="container">
+        <h1>Bem-vindo ao VIP!</h1>
+        <p>Clique no botão abaixo para entrar no VIP e ser redirecionado para a URL.</p>
+        <a href="https://exemplo.com/vip" class="button" id="vipButton">Entrar no VIP</a>
+    </div>
 
-  <script>
-    document.getElementById("productButton").addEventListener("click", function() {
-      alert("Você clicou no botão! O produto está a caminho.");
-    });
-  </script>
+    <script>
+        document.getElementById("vipButton").addEventListener("click", function() {
+            alert("Redirecionando para a URL...");
+            // O redirecionamento acontece após o alerta
+            setTimeout(function() {
+                window.location.href = "https://exemplo.com/vip";
+            }, 1000); // Redireciona após 1 segundo
+        });
+    </script>
 </body>
 </html>
